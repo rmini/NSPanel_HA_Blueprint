@@ -41,8 +41,8 @@ external_components:
       # type: local
       # path: packages/Blackymas/components
       type: git
-      url: https://github.com/Blackymas/NSPanel_HA_Blueprint
-      ref: v${version}
+      url: https://github.com/rmini/NSPanel_HA_Blueprint
+      ref: screensaver_time_format_testing
     components:
       - nspanel_ha_blueprint
     refresh: 30s
