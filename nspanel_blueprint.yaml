@@ -3551,6 +3551,23 @@ blueprint:
           default: false
           selector:
             boolean:
+        screensaver_display_time_format:
+          name: Screensaver - Display time format
+          description: "Choose how time should be displayed while sleeping (screensaver)."
+          default: '%H:%M'
+          selector:
+            select:
+              multiple: false
+              custom_value: true
+              options:
+                - label: 'HH:MM (ex. 08:30 and 20:30)'
+                  value: '%H:%M'
+                - label: 'H:MM AM/PM (ex. 8:30AM and 8:30PM)'
+                  value: '%-I:%M %p'
+                - label: 'H:MM 24H (ex. 8:30 and 20:30)'
+                  value: '%-H:%M'
+                - label: 'H.MM 24H (ex. 8.30 and 20.30)'
+                  value: '%-H.%M'
         screensaver_display_time_font_size:
           name: Screen saver - Display time font size
           description: >
@@ -8462,6 +8479,7 @@ action:
                           mui_please_confirm: '{{ mui[language].please_confirm }}'
                           mui_unavailable: '{{ mui[language].unavailable }}'
                           screensaver_time: !input screensaver_display_time
+                          screensaver_time_format: !input screensaver_display_time_format
                           screensaver_time_font: !input screensaver_display_time_font_size
                           screensaver_time_color: !input screensaver_display_time_font_color
                           decimal_separator: !input decimal_separator
