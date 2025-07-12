@@ -2,7 +2,7 @@
 
 
 namespace nspanel_ha_blueprint {
-    std::string strftime_ex(std::string format, const esphome::ESPTime& time, const std::string& am, const std::string& pm)
+    std::string strftime_ex(std::string format, esphome::ESPTime& time, const std::string& am, const std::string& pm)
     {
         if (format.find("%-H") != std::string::npos) {
             format = format.replace(format.find("%-H"), sizeof("%-H")-1,
